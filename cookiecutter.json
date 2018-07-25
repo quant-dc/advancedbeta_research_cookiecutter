@@ -1,0 +1,12 @@
+{
+  "experiment_name": "My Experiment Name",
+  "directory_name": "{{ cookiecutter.experiment_name|lower|replace(' ', '_') }}",
+  "author_name": "Firstname Lastname",
+  "author_email": "{{ cookiecutter.author_name|lower|replace(' ', '.') }}@schroders.com",
+  "start_date": "01-Jan-1999",
+  "end_date": "{% now 'utc' - 'days=1', '%d %b %Y' %}",
+  "description": "A Short Description of the project",
+  "hypothesis": "A Short Statement of the Hypotheses (; seperated for a list)",
+  "_extensions": ["jinja2_time.TimeExtension"],
+  "_version": "18.0"
+}
